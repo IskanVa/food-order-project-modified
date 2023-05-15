@@ -2,9 +2,9 @@
 Модификация моего старого pet проекта food-order-project-react в репозитории portfolio
 
 Изменения:
+- Полный переход на стэк PERN(PostgreSQL, Express.js, React, Node.js)
 - Добавление backend части при помощи Express и Node.js. Использование cors, body-parser. Добавление REST API(POST и GET запросы)
 - Добавление БД, без прямых SQL запросов, вся коммуникация происходит при помощи Sequelize
-- Полный переход на стэк PERN(PostgreSQL, Express.js, React, Node.js)
 - Добавление Babel
 - Во frontend нет особых изменений, пару анимаций при загрузке сайта добавил, все запросы происходят благодаря axios
 - Да и ещё полно чего мелкого
