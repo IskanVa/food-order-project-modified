@@ -1,0 +1,90 @@
+/* style.css */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: #383838;
+}
+
+.modal {
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.transparent {
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px;
+  border: 2px solid #adadad;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.btn-login {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  background: #6a7dfe;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #4b5bff;
+}
+
+.btn-login:active {
+  background-color: #2d3dff;
+}
+
+.authenticated .backdrop,
+.authenticated .modal {
+  display: none;
+}
